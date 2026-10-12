@@ -1,0 +1,64 @@
+/* Starting skeleton for the design project's token file, components/hx-tokens.css, for the example product Halcyon.
+ * Replace the prefix "hx" with the app's prefix everywhere, and the values with the app's own. Names must be the
+ * app's token names, so a value copied from a frame is already the name the code uses.
+ * Light values sit under :root, dark values under [data-theme="dark"]. */
+:root {
+  /* Colour: name tokens by role, not by hue, so a theme can change the hue. */
+  --hx-text-strong: #14213d;
+  --hx-text-body: #2e3a52;
+  --hx-text-muted: #5b6478;
+  --hx-text-link: #2457c5;
+  --hx-text-on-brand: #ffffff;
+  --hx-surface-page: #f5f7fa;
+  --hx-surface-raised: #ffffff;
+  --hx-surface-subtle: #eef2f7;
+  --hx-border-default: #dde3ec;
+  --hx-border-strong: #14213d;
+  --hx-brand: #1f7a8c;
+  --hx-state-success-fg: #1b7f4b;
+  --hx-state-success-bg: #e4f5ec;
+  --hx-state-error-fg: #b3261e;
+  --hx-state-error-bg: #fbe9e7;
+  --hx-state-neutral-fg: #5b6478;
+  --hx-state-neutral-bg: #eef1f5;
+
+  /* Type: one shorthand per role (weight size/line family). */
+  --hx-font-text: 'Inter', Arial, sans-serif;
+  --hx-font-mono: 'IBM Plex Mono', monospace;
+  --hx-font-page-title: 500 24px/32px var(--hx-font-text);
+  --hx-font-section-title: 500 18px/26px var(--hx-font-text);
+  --hx-font-body: 400 14px/20px var(--hx-font-text);
+  --hx-font-label: 500 14px/20px var(--hx-font-text);
+  --hx-font-caption: 400 13px/18px var(--hx-font-text);
+
+  /* Space, corners, borders, controls, elevation, motion. */
+  --hx-space-2: 2px;
+  --hx-space-4: 4px;
+  --hx-space-8: 8px;
+  --hx-space-14: 14px;
+  --hx-space-16: 16px;
+  --hx-space-20: 20px;
+  --hx-space-24: 24px;
+  --hx-space-28: 28px;
+  --hx-space-40: 40px;
+  --hx-space-44: 44px;
+  --hx-space-48: 48px;
+  --hx-radius-control: 6px;
+  --hx-radius-card: 8px;
+  --hx-border-width: 1px;
+  --hx-control-radio: 18px;
+  --hx-control-radio-ring: 5px;
+  --hx-opacity-disabled: 0.5;
+  --hx-shadow-overlay: 0 8px 24px rgba(20, 33, 61, 0.16);
+  --hx-motion-quick: 120ms ease-out;
+}
+
+[data-theme='dark'] {
+  --hx-text-strong: #f2f5fa;
+  --hx-text-body: #cfd6e3;
+  --hx-text-muted: #9aa4b8;
+  --hx-surface-page: #0f1724;
+  --hx-surface-raised: #182234;
+  --hx-surface-subtle: #1d2a3f;
+  --hx-border-default: #2c3a52;
+}

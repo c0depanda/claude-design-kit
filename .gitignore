@@ -1,0 +1,12 @@
+node_modules/
+scratch/
+.DS_Store
+__pycache__/
+*.pyc
+env.local
+.env
+.env.*
+!.env.example
+*.log
+playwright-report/
+test-results/

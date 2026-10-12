@@ -1,0 +1,30 @@
+{
+ "about": "Example map for Halcyon, an invented product: design frames to the app routes that implement them. One entry per frame and width. file is the design file's code, frame its id, route the app path, account the sign-in that AUTH_MODULE or a storage state provides. scenario (optional) seeds the state the frame draws; steps (optional) reach a state behind clicks.",
+ "frames": [
+  { "file": "S2", "frame": "hx-s2-1-profile-1440", "route": "/settings/profile", "account": "member" },
+  { "file": "S2", "frame": "hx-s2-1-profile-1024", "route": "/settings/profile", "account": "member" },
+  { "file": "S2", "frame": "hx-s2-1-profile-390", "route": "/settings/profile", "account": "member" },
+  { "file": "S2", "frame": "hx-s2-1-profile-320", "route": "/settings/profile", "account": "member" },
+  { "file": "S2", "frame": "hx-s2-6-close-1440", "route": "/settings/close-account", "account": "member", "scenario": "close-account-blocked" },
+  { "file": "D1", "frame": "hx-d1-3-key-1440", "route": "/developers/api-keys/new", "account": "admin", "scenario": "developer-keys-active", "steps": [{ "check": "Secret key" }] },
+  {
+   "file": "P1",
+   "frame": "hx-p1-5-pin-1440",
+   "route": "/payments/recipients",
+   "account": "member",
+   "steps": [
+    { "click": "Ada Example", "exact": false },
+    { "click": "Send a payment" },
+    { "fill": "Amount", "value": "1250.00" },
+    { "fill": "Reference (optional)", "value": "Rent share" },
+    { "wait": 1500 },
+    { "click": "Review payment" },
+    { "wait": 800 },
+    { "click": "Send payment" },
+    { "wait": 1000 },
+    { "press": "4" }, { "press": "7" }, { "press": "2" }, { "press": "5" },
+    { "wait": 400 }
+   ]
+  }
+ ]
+}

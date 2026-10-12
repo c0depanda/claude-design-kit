@@ -1,0 +1,100 @@
+/* Starting skeleton for the design project's component file, components/hx.css, for the example product Halcyon.
+ * Replace the prefix "hx" with the app's prefix everywhere. The rules:
+ *   - one class per component, named as the app names it: component HxButton → .hx-button;
+ *     variant → .hx-button-primary; size → .hx-button-md. Frames carry the same names as marks:
+ *     data-component="HxButton" data-component-variant="primary" data-component-size="md".
+ *   - states are data-state attributes: checked, on, off, disabled, error.
+ *   - inner parts have rules of their own (a radio's ring, a switch's thumb, a select's chevron), because a library
+ *     that only draws the outer box draws a radio as a box and a word.
+ *   - values come from tokens only.
+ *   - frames drawn at a fixed width carry .hx-screen; the width tiers below then apply inside 1024, 390 and 320
+ *     frames as they would in the app at those widths. */
+
+.hx-screen {
+  container: hx-screen / inline-size;
+}
+
+/* Button */
+.hx-button {
+  align-items: center;
+  border: var(--hx-border-width) solid var(--hx-border-strong);
+  border-radius: var(--hx-radius-control);
+  color: var(--hx-text-strong);
+  display: inline-flex;
+  font: var(--hx-font-label);
+  gap: var(--hx-space-8);
+  justify-content: center;
+  min-block-size: var(--hx-space-44);
+  padding: 0 var(--hx-space-16);
+}
+.hx-button.hx-button-primary {
+  background: var(--hx-brand);
+  border-color: var(--hx-brand);
+  color: var(--hx-text-on-brand);
+}
+.hx-button.hx-button-md {
+  min-block-size: var(--hx-space-40);
+}
+.hx-button[data-state='disabled'] {
+  opacity: var(--hx-opacity-disabled);
+}
+
+/* Text input */
+.hx-text-input {
+  background: var(--hx-surface-raised);
+  border: var(--hx-border-width) solid var(--hx-border-default);
+  border-radius: var(--hx-radius-control);
+  color: var(--hx-text-strong);
+  font: var(--hx-font-body);
+  min-block-size: var(--hx-space-44);
+  padding: 0 var(--hx-space-14);
+}
+.hx-text-input[data-state='error'] {
+  border-color: var(--hx-state-error-fg);
+}
+
+/* Radio: the ring is an inner part with its own rule. */
+.hx-radio {
+  block-size: var(--hx-control-radio);
+  border: var(--hx-border-width) solid var(--hx-border-strong);
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  inline-size: var(--hx-control-radio);
+}
+.hx-radio[data-state='checked'] {
+  background: var(--hx-surface-raised);
+  border-width: var(--hx-control-radio-ring);
+}
+
+/* Status badge */
+.hx-status-badge {
+  border-radius: var(--hx-radius-control);
+  font: var(--hx-font-caption);
+  padding: var(--hx-space-2) var(--hx-space-8);
+}
+.hx-status-badge.hx-status-badge-success {
+  background: var(--hx-state-success-bg);
+  color: var(--hx-state-success-fg);
+}
+.hx-status-badge.hx-status-badge-neutral {
+  background: var(--hx-state-neutral-bg);
+  color: var(--hx-state-neutral-fg);
+}
+
+/* Width tiers: tablet, phone and narrow phone. */
+@container hx-screen (width < 1200px) {
+  .hx-button {
+    padding: 0 var(--hx-space-14);
+  }
+}
+@container hx-screen (width < 700px) {
+  .hx-button {
+    min-block-size: var(--hx-space-48);
+  }
+}
+@container hx-screen (width < 355px) {
+  .hx-button {
+    padding: 0 var(--hx-space-8);
+  }
+}

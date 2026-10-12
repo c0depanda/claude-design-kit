@@ -1,0 +1,27 @@
+{
+ "remarks": {
+  "files": 1,
+  "parts": 5,
+  "fixes": 0
+ },
+ "files": {
+  "P1": {
+   "before": "bc1064ebaade1192ad89cced76466aa31bad489387a35aa4f7424d056ba88b4c",
+   "after": "1f4da627e05ef611276b063cdc39f4eac8ccb7d406a40a12c4ad6a36fbc4c5d8",
+   "parts": 5
+  }
+ },
+ "pack": {
+  "kit-link.js": "be5e4ba8c39cb8569acdb382ebf787fc077af19c5ce7de09c622951ca80cc493",
+  "kit-remarks.json": "402fc882bfb3a878358fb568cada1b19886882e57cd7625620e1a638776bd9ea",
+  "kit-rules.js": "8f9d8fd0b9e4b32ff5b88b11f5d302651893fb9cb39343ee9077d878e7dfec24",
+  "kit-rules.json": "d399cb44d3b1f7dd91eafc7305242e81728413b5385b25a6f1cfcbc5a66bdd4a",
+  "kit-run.js": "d27923722a391c6d147c81b2c26f7fa990c5f336fb5c54b1d99168c83704acc2"
+ },
+ "rules": {
+  "file": "CLAUDE.md",
+  "heading": "## Components and tokens",
+  "before": "c098c7ab135b3f5f576acf562bcc04e2e18f5d4a8452c7fe5f6d9134e78a50f9",
+  "after": "07d9333c0054599243bc2bc1b21c4f53c9ba8d93744bb085c5557a5600ef9b75"
+ }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P1 Payments</title>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="components/hx-tokens.css">
+<link rel="stylesheet" href="components/hx.css">
+<style>
+body{margin:0}
+.canvas{background:var(--hx-surface-subtle);color:var(--hx-text-body);display:flex;flex-direction:column;font:var(--hx-font-body);gap:var(--hx-space-48);padding:var(--hx-space-48);width:max-content}
+.eyebrow{color:var(--hx-text-muted);font:var(--hx-font-caption);font-family:var(--hx-font-mono);text-transform:uppercase}
+.title{color:var(--hx-text-strong);font:var(--hx-font-page-title);margin:0}
+.section{display:flex;flex-direction:column;gap:28px}
+.note{margin:0;max-width:880px}
+.row{align-items:flex-start;display:flex;flex-wrap:nowrap;gap:28px}
+.column{display:flex;flex:none;flex-direction:column;gap:var(--hx-space-8)}
+.frame{background:var(--hx-surface-page);border:var(--hx-border-width) solid var(--hx-border-default);box-sizing:border-box;flex:none}
+.page{display:flex;flex-direction:column;gap:var(--hx-space-20);max-width:560px;padding:var(--hx-space-40) var(--hx-space-48)}
+.hx-screen .page{padding:var(--hx-space-24) var(--hx-space-16)}
+.field{display:flex;flex-direction:column;gap:var(--hx-space-8)}
+.choice{align-items:center;display:flex;gap:var(--hx-space-8)}
+</style>
+</helmet>
+<div class="canvas">
+
+<header class="section">
+<span class="eyebrow">Halcyon · P1</span>
+<h1 class="title">Send a payment</h1>
+<p class="note">A small sample for the kit's worked example: one state of the recipient step at 1440 and 390, the result at 1440, and the email that follows.</p>
+<p class="note">Cast and sample data: Ada Example sends $1,250.00 to Ben Sample, reference HX-PAY-1042.</p>
+</header>
+
+<section class="section">
+<span class="eyebrow">1 · Recipient</span>
+<h2 style="font:var(--hx-font-section-title);color:var(--hx-text-strong);margin:0">Send a payment</h2>
+<p class="note">Continue stays disabled until the recipient's name is confirmed.</p>
+<h3 style="font:var(--hx-font-label);margin:0">1.1 Recipient · name confirmed</h3>
+<div class="row">
+<div class="column"><span class="eyebrow">1.1 Recipient · name confirmed · 1440</span>
+<div id="hx-p1-1-1440" data-screen-label="P1.1 Send · Recipient · 1440" class="frame hx-screen" style="min-height:900px;width:1440px">
+<div class="page">
+<h1 class="title">Send a payment</h1>
+<div class="field"><span style="font:var(--hx-font-label)">Recipient</span><div class="hx-text-input" data-component="HxTextInput" style="align-items:center;display:flex">Ben Sample</div><span class="hx-status-badge hx-status-badge-success">Name confirmed</span></div>
+<div class="field"><span style="font:var(--hx-font-label)">Amount</span><div class="hx-text-input" data-component="HxTextInput" style="align-items:center;display:flex">$1,250.00</div></div>
+<div class="field"><span style="font:var(--hx-font-label)">Speed</span>
+<div class="choice"><span class="hx-radio" data-component="HxRadio"></span> Standard · free</div>
+<div class="choice"><span class="hx-radio" data-component="HxRadio"></span> Instant · $1.50</div>
+</div>
+<a class="hx-button hx-button-primary" data-component="HxButton" data-component-variant="primary" href="#hx-p1-2-1440" style="align-self:flex-start;text-decoration:none">Continue</a>
+</div>
+</div>
+</div>
+<div class="column"><span class="eyebrow">1.1 Recipient · name confirmed · 390</span>
+<div id="hx-p1-1-390" data-screen-label="P1.1 Send · Recipient · 390" class="frame hx-screen" style="min-height:844px;width:390px">
+<div class="page">
+<h1 class="title">Send a payment</h1>
+<div class="field"><span style="font:var(--hx-font-label)">Recipient</span><div class="hx-text-input" data-component="HxTextInput" style="align-items:center;display:flex">Ben Sample</div><span class="hx-status-badge hx-status-badge-success" style="align-self:flex-start">Name confirmed</span></div>
+<div class="field"><span style="font:var(--hx-font-label)">Amount</span><div class="hx-text-input" data-component="HxTextInput" style="align-items:center;display:flex">$1,250.00</div></div>
+<div class="field"><span style="font:var(--hx-font-label)">Speed</span>
+<div class="choice"><span class="hx-radio" data-component="HxRadio"></span> Standard · free</div>
+<div class="choice"><span class="hx-radio" data-component="HxRadio"></span> Instant · $1.50</div>
+</div>
+<a class="hx-button hx-button-primary" data-component="HxButton" data-component-variant="primary" href="#hx-p1-2-1440" style="text-decoration:none">Continue</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<span class="eyebrow">2 · Result</span>
+<h2 style="font:var(--hx-font-section-title);color:var(--hx-text-strong);margin:0">Payment sent</h2>
+<p class="note">Sent means the payment left the account; it never claims the recipient's bank has credited it. The email follows the email set and keeps its inline styles.</p>
+<h3 style="font:var(--hx-font-label);margin:0">2.1 Result · sent, and its email</h3>
+<div class="row">
+<div class="column"><span class="eyebrow">2.1 Result · sent · 1440</span>
+<div id="hx-p1-2-1440" data-screen-label="P1.2 Send · Sent · 1440" class="frame hx-screen" style="min-height:900px;width:1440px">
+<div class="page">
+<h1 class="title">Payment sent</h1>
+<p style="margin:0">$1,250.00 to Ben Sample · reference HX-PAY-1042</p>
+<span class="hx-status-badge hx-status-badge-success" style="align-self:flex-start">Sent</span>
+<a class="hx-button" data-component="HxButton" href="#hx-p1-1-1440" style="align-self:flex-start;text-decoration:none">Done</a>
+</div>
+</div>
+</div>
+<div class="column"><span class="eyebrow">2.1 Result · email · 600</span>
+<div id="hx-p1-9-email-600" data-screen-label="P1.9 EMAIL · Payment sent · 600" style="width:600px;background:#ffffff;border:1px solid #dde3ec">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-family:Inter, Arial, Helvetica, sans-serif">
+<tr><td style="padding:32px 32px 8px;font-size:24px;line-height:30px;font-weight:500;color:#14213d">You sent $1,250.00</td></tr>
+<tr><td style="padding:0 32px 24px;font-size:16px;line-height:24px;color:#2e3a52">To Ben Sample · reference HX-PAY-1042</td></tr>
+<tr><td style="padding:0 32px 32px"><a href="#hx-p1-2-1440" style="display:inline-block;padding:14px 24px;background:#1f7a8c;color:#ffffff;font-size:16px;line-height:24px;text-decoration:none">View payment</a></td></tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+
+</div>
+</x-dc>
+</body>
+</html>

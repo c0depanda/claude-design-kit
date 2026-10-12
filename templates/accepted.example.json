@@ -1,0 +1,14 @@
+[
+ {
+  "frame": "^hx-s2-4-",
+  "kind": "copy-missing",
+  "match": "If you lose access|Lost a device",
+  "reason": "Example: the recovery entry leads to a flow outside this phase; build it with that flow"
+ },
+ {
+  "frame": "^hx-s2-6-",
+  "kind": "title-offset",
+  "match": ".",
+  "reason": "Example: settings task pages keep the section navigation (design delta L03 records it)"
+ }
+]

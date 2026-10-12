@@ -1,0 +1,11 @@
+{
+  "name": "claude-design-kit-tools",
+  "private": true,
+  "description": "Browser tools for the Claude Design workflow kit. Only needed on a machine with no project that already has Playwright.",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "playwright": "^1.63.0"
+  }
+}
